@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: green;
+            top:100px;
+            position: absolute;
+        }
+        
+    </style>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".go").click(function(){
+                    $(".box").animate({left:"+=100px"},1000)
+                });
+                $(".back").click(function(){
+                    $(".box").animate({left:"-=100px"},1000)
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class = "box"></div>
+    <button class = "go">움직여~</button>
+    <button class ="back">돌아와~</button>
+
+
+</body>
+</html>

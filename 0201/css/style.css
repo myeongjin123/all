@@ -1,0 +1,9 @@
+body{
+    font-size: large;
+    background: url(../img/다운로드.png) center no-repeat;
+    background-color: beige;
+    background-attachment: fixed;  
+};
+img{
+    width: 100px; height: 100px;
+}

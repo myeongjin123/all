@@ -1,0 +1,36 @@
+*{box-sizing:border-box;}
+body{
+    margin:0;
+
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+a:hover{
+    font-weight: bold;
+    background: yellow;
+}
+.banner{
+    height: 400px;
+    background-color: blue;
+    text-align: center;
+    font-size: 100px;
+    color: #ddd;
+}
+.header{
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding-top :30px;
+    position:-webkit-sticky;
+
+}
+section{
+    margin-bottom: 80px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #ccc;
+}
+.banner:hover{
+    background-color: red;
+}

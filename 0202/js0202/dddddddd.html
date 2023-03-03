@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //         let a = prompt("마스크 갯수");
+        // if(a % 5 == 0 || a % 3 != 0){
+        //     document.write("5팩짜리 " + a / 5 + "개를 쓰세요.");
+            
+        // }
+
+        // else if(a % 3 == 0 || a % 5 != 0){
+        //         document.write("3팩짜리 " + a / 3 + "개를 쓰세요.");
+        // }
+        // else if(a % 5 == 0 && a % 3 == 0 );
+        //         document.write("5팩짜리" + a / 5 +"개," + "3팩짜리" + a / 3 + "개를 쓰세요.")
+    
+     let n = prompt("마스크의 갯수를 입력하세요.");
+     let result = 0;
+     let five = 0;
+     let three = 0;
+
+     for(let i = parseInt(n/5); i >= 0; i--){
+if(i % 5 == 0 && i % 3 != 0){
+    document.write("5팩 " + n / 5 + "개");
+}else if (i % 3 == 0 && i % 5 != 0){
+    documnet.write("3팩 " + n / 3 + "개");
+
+
+
+}
+
+
+     }
+    
+    </script>
+</body>
+</html>

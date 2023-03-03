@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            background: yellow;
+        }
+    </style>
+    <script src = "http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+
+        // })
+        $(function(){
+            /*
+            show() hide() toggle() fadeIn() fadeOut() fadeToggle()
+            slideDown() sideUp() sideToggle() fadeTo("slow or 500", 0.5)
+            콜백함수 callback 
+            */
+            $(".box").click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+    
+</head>
+<body>
+<div class="box">노랑박스</div>
+<button class = "btn">버튼</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+}
+.carousel-caption{
+    color: black;
+}
+.slick-dots{
+    color: #5a5a5a;
+}
+.slick-dots{
+    bottom:10px;
+}
+.slick-prev{
+    left: 25px;
+}
+.slick-next{
+    right:25px;
+}
+.main{
+    position: relative;
+}
+.indicator{
+    position: absolute;
+    width: 100%;
+    top: 220px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.indicator>div{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 300ms;
+}
+.indicator>div:hover{
+    opacity: 1;
+}
+.nextArrow{
+    right:50px;
+}
+.indicator i{
+    font-size: 100px;
+}

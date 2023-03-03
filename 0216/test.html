@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        nav>ul.navi{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+
+        
+        }
+        .navi>li{
+            position: relative;
+        }
+        .navi>li>a{
+            color: #840404;
+            text-decoration: none;
+            line-height: 50px;
+        }
+        a.logo{
+            display: block;
+            width: 120px;
+            height: 50px;
+            font-size: 40px;
+            color: red;
+            font-weight: bold;
+            float: left;
+            margin-right: 200px;
+        }
+        .sub{
+            display: none;
+            position: absolute;
+            background: #fff;
+            z-index: 100;
+            width: 100px;
+        }
+        .banner{
+            height: 400px;
+            background: pink;
+            color: blueviolet;
+            display: flex;
+            font-size: 70px;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner p{
+            font-size: 70px;
+            text-align: center;
+        }
+        
+    </style>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        //     $("#p1").click(function(){
+        //         $(this).css("color","green").slideUp(2000).slideDown(2000);
+        //     });
+        // }); //jquery
+        $(".navi>li").hover(function(){
+            $(this).find(".sub").fadeToggle();
+            });
+        
+        $(".title1").html("제목입니다.");
+        $("form").submit(function(event){
+            event.preventDefault();
+            if($("#username").val()==""){
+            alert("이름을 입력하세요.");
+            return;
+            }
+  
+        if($("#userpass").val()==""){
+            alert("비밀번호를 입력하세요.");
+            return;
+        }     
+     });
+        $(".logo").click(function(event){
+            event.preventDefault();
+        });
+        $(".logo").click(function(e){
+            e.preventDefault();
+            let link = $(".logo").attr("href", "http://google.com");
+        });
+    });
+    </script>
+</head>
+<body>
+    <!-- <p id ="p1">재미있는 jquery입니다.</p> -->
+    <div class ="container">
+        <nav>
+            <ul class = "navi">
+                <a href = "http://naver.com" class="logo">LOGO</a>
+                <li><a href = "#">메뉴1</a>
+                    <ul class ="sub">
+                        <li><a href = "#">서브1</a></li>
+                        <li><a href = "#">서브2</a></li>
+                        <li><a href = "#">서브3</a></li>
+                        <li><a href = "#">서브4</a></li>
+                    </ul></li>
+                <li><a href = "#">메뉴2</a>
+                    <ul class ="sub">
+                        <li><a href = "#">서브1</a></li>
+                        <li><a href = "#">서브2</a></li>
+                        <li><a href = "#">서브3</a></li>
+                        <li><a href = "#">서브4</a></li>
+                    </ul></li>
+                <li><a href = "#">메뉴3</a>
+                    <ul class ="sub">
+                        <li><a href = "#">서브1</a></li>
+                        <li><a href = "#">서브2</a></li>
+                        <li><a href = "#">서브3</a></li>
+                        <li><a href = "#">서브4</a></li>
+                    </ul></li>
+                <li><a href = "#">메뉴4</a>
+                    <ul class ="sub">
+                        <li><a href = "#">서브1</a></li>
+                        <li><a href = "#">서브2</a></li>
+                        <li><a href = "#">서브3</a></li>
+                        <li><a href = "#">서브4</a></li>
+                    </ul></li>
+            </ul>
+            
+        </nav>
+    </div>
+    <div class = "banner">
+        <p>banner</p>
+    </div>
+    <section class = "main1">
+        <div class = "container">
+            <h1 class ="title1"></h1>
+            <form>
+            <input type = "text" id="username">
+            <input type = "password" id="userpass">
+            <button type="submit">전송</button>
+        </form>
+        </div>
+    </section>
+</body>
+</html>

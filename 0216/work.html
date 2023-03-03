@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bigBox{
+            width: 600px;
+            height: 600px;
+            border: #000 solid;
+        }
+        .smallBox{
+            /* margin-left: auto;
+            margin-right: auto; */
+            width: 120px;
+            height: 100px;
+            display: inline-block;
+            margin-left: 20px;
+            margin-top: 10px;
+            border: #000 solid ;
+
+
+        }
+        .smallBox img{
+            width: 110px;
+            height: 90px;
+        }
+    </style>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".smallBox>img").click(function(){
+              const img = $(this).attr("src");
+              alert(img);
+              $("bigBox>img").attr("src", img);
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class = "bigBox"></div>
+    <div class="smallBox"><a href="#"><img id = "img1" src="../0216/img/img3.jpg" alt="0"></a></div>
+    <div class="smallBox"><a href="#"><img id = "img2" src="../0216/img/images.jpg" alt="1"></a></div>
+    <div class="smallBox"><a href="#"><img id = "img3" src="../0216/img/images2.jpg" alt="2"></a></div>
+    <div class="smallBox"><a href="#"><img id = "img4"src="../0216/img/img3.jpeg" alt="3"></a></div>
+</body>
+</html>

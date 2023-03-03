@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .box{
+            height: 100px;
+        }
+        .tooltip{
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dashed #333;
+        }
+        .tooltiptext{
+            
+            width: 120px;
+            background: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            /* visibility: hidden; */
+            display: none;
+            bottom: 170%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .tooltip:hover .tooltiptext{
+            /* visibility: visible; */
+            display: inline-block;
+            
+        }
+        .tooltiptext::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border-width:5px ;
+            top: 100%;
+            left: calc(50% -2.5px);
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+        .tooltiptext2{
+            
+            width: 120px;
+            background: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            /* visibility: hidden; */
+            display: none;
+            left: -150px;
+        }
+        .tooltip:hover .tooltiptext2{
+            /* visibility: visible; */
+            display: inline-block;
+        }
+        .tooltiptext2::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border-width:5px ;
+            left: 100%;
+            left: calc(100% -2.5px);
+            border-style: solid;
+            border-color: transparent transparent transparent black;
+        }
+
+        .tooltiptext3{
+            
+            width: 120px;
+            background: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            /* visibility: hidden; */
+            display: none;
+            right: -150px;
+        }
+        .tooltip:hover .tooltiptext3{
+            /* visibility: visible; */
+            display: inline-block;
+        }
+        .tooltiptext3::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border-width:5px ;
+            right: 100%;
+            left: calc(100% -2.5px);
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+        .tooltiptext4{
+            
+            width: 120px;
+            background: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            /* visibility: hidden; */
+            display: none;
+            top: 170%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .tooltip:hover .tooltiptext4{
+            /* visibility: visible; */
+            display: inline-block;
+            
+        }
+        .tooltiptext4::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border-width:5px ;
+            bottom: 100%;
+            left: calc(50% -2.5px);
+            border-style: solid;
+            border-color:  transparent transparent black transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="tooltip">
+        여기에 마우스를 올리세요.
+        <span class="tooltiptext">
+            툴팁입니다.
+        </span>
+        <div class="tooltiptext2">툴팁임.</div>
+        <div class="tooltiptext3">툴팁임.</div>
+        <div class="tooltiptext4">툴팁임.</div>
+    </div>
+
+    
+</body>
+</html>

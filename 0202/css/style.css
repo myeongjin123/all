@@ -1,0 +1,37 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 15px;
+}
+.a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+        /* text-decoration-line:overline;
+        text-decoration-color: red;
+        text-decoration: dashed; */
+        line-height: 1;
+        text-indent: 50px;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        /*1. style varian weight size/line-height font-family
+        2. size, family*/
+        /* font: italic small-caps bold 13px/30px 'Noto Sans KR', 'Sanserif' */
+        font: 13px 'Noto Sans KR', sans-serif     
+           
+}
+.b{
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: overline underline red double;;
+}
+.c{
+    font-family: 'Dongle', sans-serif;
+    font-size : 50px;
+}
+.d{
+    font-family: 'Itim', sans-serif;
+    text-align: center;
+}
+.d {
+    text-transform: capitalize;
+}

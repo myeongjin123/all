@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fNumber">
+    <input type="text" id="sNumber">
+    <button type="button" onclick="mul()">곱하기</button>
+    <button type="button" onclick="div()">나누기</button>
+    <div id="result"></div>
+    <script>
+        function mul(){
+            const num1 = document.getElementById("fNumber").value;
+            const num2 = document.getElementById("sNumber").value;
+            document.getElementById("result").innerHTML = num1 * num2
+        }
+        function div(){
+            const num1 = document.getElementById("fNumber").value;
+            const num2 = document.getElementById("sNumber").value;
+            document.getElementById("result").innerHTML = num1 / num2
+        }
+    </script>
+</body>
+</html>

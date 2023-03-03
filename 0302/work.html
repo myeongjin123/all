@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let dt = new Date();
+        let year = dt.getFullYear();
+        let months = dt.getMonth()+1;
+        let date = dt.getDate()
+        let days = dt.getDay();
+        let weekArray = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+        let hours = dt.getHours();
+        let min = dt.getMinutes();
+        let sec = dt.getSeconds();
+        
+        document.write("오늘은 " + year + "년 " + months + "월 " + date + "일 " + weekArray[days] + "입니다.");
+        document.write("그리고 지금 시간은 오전" + hours + "시" + min + "분 " + sec + "초입니다.");
+        document.write(dt);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

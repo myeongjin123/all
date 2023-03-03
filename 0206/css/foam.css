@@ -1,0 +1,99 @@
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    color : #555555
+}
+.container{
+    width : 800px;
+    margin : 80px auto;
+}
+.container li{
+    border-top: 1px solid #6455eb;
+}
+.container ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.container li:last-child{
+    border-bottom:1px solid #6455eb;
+}
+.container span{
+    display: inline-block;/*block inline table 레이아웃: inline-block flex grid*/
+    background-color: #adacb9;
+    width: 150px;
+    height: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 35px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.container label{
+    margin-right: 15px;
+}
+.check{
+    background : #adacb9 url(../images/red-check-mark-icon.webp) no-repeat 20px 10px;
+    background-size: 15px;
+}
+input{
+    display: inline-block;
+
+}
+.btn-box{
+    padding-top : 20px;
+    text-align: center;
+}
+
+input[type = text]{
+    border: 1px solid 
+}
+
+.myButton2 {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:12px 50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton2:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+.myButton1 {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.myButton1:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.myButton1:active {
+	position:relative;
+	top:1px;
+}
+
+

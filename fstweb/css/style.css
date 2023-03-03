@@ -1,0 +1,105 @@
+*{ box-sizing:border-box;}
+body{
+    margin:0;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.text-center{
+    text-align:center;
+}
+.text-right{
+    text-align:right;
+}
+.container{
+    width:1200px;
+    /* 블록박스 가운데 정렬 */
+    margin-left:auto;
+    margin-right:auto;
+}
+.row{
+    margin-left:-10px;
+    margin-right:-10px;
+}
+.col-4{
+    width: 33.333334%;
+    float:left;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+/********* HEADER ********/
+header{
+    height:90px;
+    background-color:#F1E3C4;
+    padding-bottom:15px;
+}
+header a.left{
+    color:#81725F;
+    text-decoration:none;
+    display:block;
+    float:left;
+    margin-top:50px;
+    margin-right: 50px;
+    font-weight:600;
+}
+header a span.material-symbols-outlined{
+    font-size:18px;
+    vertical-align:top;
+    margin-left:15px;
+}
+.logo h1, 
+.logo p{
+    margin:0;
+}
+.logo h1 a{
+    color: #81725F;
+    text-decoration: none;
+}
+.logo h1{
+    letter-spacing:4px;
+    margin-top:15px;
+}
+.logo p{
+    text-transform: uppercase;
+    font-weight:600;
+    letter-spacing:3px;
+    color: #81725F;
+}
+.right-top{
+    padding-top:10px;
+    text-align:right;
+}
+.right-top a{
+    text-decoration:none;
+    font-size:14px;
+    font-weight:300;
+    color:#81725F;
+    padding-right:15px;
+    padding-left:15px;
+    border-right:1px solid #d3c2ab;
+}
+.tabs{
+    float:right;
+    font-size:14px;
+    font-weight:300;
+    color:#81725F;
+    cursor:pointer;
+    line-height:14px;
+    padding-left:15px;
+    position:relative;
+}
+
+.tabs:first-child{
+    padding-right:15px;
+}
+.tabs span{
+    vertical-align:middle;
+}
+.tabs:first-child{
+    padding-right: 15px;
+}
+.tabs-on ul{
+    margin:0;
+    padding:0;
+    list-style-position: inside;
+}

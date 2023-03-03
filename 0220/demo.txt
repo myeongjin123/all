@@ -1,0 +1,3 @@
+ <p id="box1">Jquery Ajax1!!"</p>
+  <p id="box2">Jquery Ajax2!!"</p>
+   <p id="box3">Jquery Ajax3!!"</p>

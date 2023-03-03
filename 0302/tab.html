@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body, html{
+            height: 100%;
+            margin: 0;
+        }
+        nav{
+            overflow: auto;
+        }
+        a.tablink{
+            display: inline-block;
+            float: left;
+            background: #333;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: 18px;
+            width: 25%;
+            text-align: center;
+            text-decoration: none;
+            font-variant: small-caps;
+            transition: all 300ms;
+        }
+        a.tablink:hover{
+            background-color: #888;
+        }
+        .tabcontent{
+            color: #fff;
+            padding: 100px 50px;
+            height: 100%;
+            
+        }
+
+        #about{
+            background-color: red;
+        }
+        #product{
+            background-color: orange;
+        }
+        #community{
+            background-color: green;
+        }
+        #contact{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="javascript:void(0)" id="default" class="tablink" onclick="tabPage('about', this, 'red')">About</a>
+        <a href="javascript:void(0)" class="tablink" onclick="tabPage('product', this, 'orange')">Product</a>
+        <a href="javascript:void(0)" class="tablink" onclick="tabPage('community', this, 'green')">Community</a>
+        <a href="javascript:void(0)" class="tablink" onclick="tabPage('contact', this, 'blue')">contact</a>
+    </nav>
+    <div id="about" class="tabcontent">
+        <h1>About</h1>
+        <p>하는 미인을 같이, 쓸쓸하랴? 물방아 주며, 일월과 때에, 곳으로 아름다우냐? 있으며, 그것은 그와 구하지 이상은</p>
+        <p>하는 가는 그러므로 발휘하기 교향악이다. 오아이스도 이상은 청춘 이상, 피부가 피고 맺어, 설산에서 것이다.보라, 있으랴?</p>
+    </div>
+    <div id="product" class="tabcontent">
+        <h1>Prodcut</h1>
+        <p>하는 미인을 같이, 쓸쓸하랴? 물방아 주며, 일월과 때에, 곳으로 아름다우냐? 있으며, 그것은 그와 구하지 이상은</p>
+        <p>하는 가는 그러므로 발휘하기 교향악이다. 오아이스도 이상은 청춘 이상, 피부가 피고 맺어, 설산에서 것이다.보라, 있으랴?</p>
+    </div>
+    <div id="community" class="tabcontent">
+        <h1>Community</h1>
+        <p>하는 미인을 같이, 쓸쓸하랴? 물방아 주며, 일월과 때에, 곳으로 아름다우냐? 있으며, 그것은 그와 구하지 이상은</p>
+        <p>하는 가는 그러므로 발휘하기 교향악이다. 오아이스도 이상은 청춘 이상, 피부가 피고 맺어, 설산에서 것이다.보라, 있으랴?</p>
+    </div>
+    <div id="contact" class="tabcontent">
+        <h1>Contact</h1>
+        <p>하는 미인을 같이, 쓸쓸하랴? 물방아 주며, 일월과 때에, 곳으로 아름다우냐? 있으며, 그것은 그와 구하지 이상은</p>
+        <p>하는 가는 그러므로 발휘하기 교향악이다. 오아이스도 이상은 청춘 이상, 피부가 피고 맺어, 설산에서 것이다.보라, 있으랴?</p>
+    </div>
+    <script>
+        function tabPage(pageName, el, color){
+            let i, tabcontent, tablink;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            tablink = document.getElementsByClassName("tablink");
+            for(i = 0; i < tabcontent.length; i++){
+                tabcontent[i].style.display = "none";
+            }
+            for(i = 0; i < tablink.length; i++){
+                tablink[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            el.style.backgroundColor = color;
+        }
+
+        document.getElementById("default").click();
+    </script>
+</body>
+</html>

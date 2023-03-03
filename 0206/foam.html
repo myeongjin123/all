@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/foam.css">
+</head>
+<body>
+    <div class = "container">
+        <form nmae = "form" action="" method="post">
+    <ul>
+        <li><span class = "check">이름</span>
+        <input type="text"
+         name = "username" 
+         id = "username" 
+         placeholder="이름" required></li>
+        <li><span class = "check">성별</span>
+        <label><input type="radio" name = "gender" id = "gender" value="female">여성</label>
+        <label><input type="radio" name = "gender" id = "male" value="male" checked>남성</label>
+    </li>
+        <li><span class = "check">아이디</span>
+            <input type="text"
+         name = "userid" 
+         id = "userid" 
+         placeholder="아이디" required>
+        </li>
+        <li><span>전화번호</span>
+        <select name = "tp1">
+            <option value="010" selected>010</option>
+            <option value="011" >011</option>
+            <option value="012" >012</option>
+            <option value="013" >013</option>
+        </select>
+    -
+    <input type="text" name = "tp2" class = "tel">
+    <input type="text" name = "tp3" class = "tel">
+</li>
+        <li><span class = "check">휴대폰번호</span>
+            <select name = "hp1">
+                <option value="02" selected>02</option>
+                <option value="031" >031</option>
+                <option value="032" >032</option>
+                <option value="033" >033</option>
+            </select>
+            <input type="text" name = "hp2" class = "tel">
+            <input type="text" name = "hp3" class = "tel">
+        </li>
+        <li><span class = "check">이메일</span>
+        <input type="text" nmae = "email1" class = "email">
+    @
+        <input type="text" nmae = "email2" class = "email">
+    <select nmae = "email"3  ide = "e">
+        <option value="naver.com" selected>naver.com</option>
+        <option value="google.com">google.com</option>
+        <option value="daum.net">daum.net</option>
+    </select>
+</li>
+    </ul>        
+    </div>
+    <div class = "btn-box">
+        <button type="reset" class = "myButton1">취소</button>
+        <button type="submit" class = "myButton2">전송</button>
+    </div>
+</form>
+</body>
+</html>
