@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f_back(str){
+            if(str.length >= 3){
+                const bk = str.substring(str.length - 3);
+                return bk + str + bk;
+            }else{
+                return false;
+            }
+        }
+        console.log(f_back("ab"))
+        console.log(f_back("abc"))
+        console.log(f_back("abcd"))
+        console.log(f_back("abcdef"))
+        console.log(f_back("abaaa"))
+    </script>
+</body>
+</html>

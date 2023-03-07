@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        // let a = prompt("문자를 입력해.");
+        // let b = prompt("몇번째 문자 지울래?");
+        // document.write(a.replace(a.charAt(b - 1), ""));
+        let str = prompt("단어를 입력하세요.");
+        let pos = prompt("삭제 할 위치 번호를 입력하세요.");
+        
+        document.getElementById("result").innerHTML = rm_str(str, parseInt(pos - 1));
+
+        function rm_str(str, str_pos){
+            part1 = str.substring(0, str_pos);
+            part2 = str.substring(str_pos + 1, str.length);
+            return part1 + part2
+        } 
+        
+    </script>
+</body>
+</html>
