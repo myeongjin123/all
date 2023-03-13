@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.hamburger-menu span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-menu:hover{
+    cursor: pointer;
+}
+
+.hamburger-menu span:first-child {
+  transform-origin: left;
+}
+
+.hamburger-menu span:last-child {
+  transform-origin: left;
+}
+
+.hamburger-menu:hover span:first-child {
+  transform: rotate(45deg) translate(0px, 0px);
+}
+
+.hamburger-menu:hover span:last-child {
+  transform: rotate(-45deg) translate(0px, 0px);
+}
+
+.hamburger-menu:hover span:nth-child(2) {
+  opacity: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+</body>
+</html>

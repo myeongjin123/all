@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function aver(scr){
+            let sum = 0;
+            for(let i = 0; i < scr.length; i++){
+                sum += scr[i];
+            }
+
+
+            // const sum = scr.reduce((arr, arrc, idx) => {
+            //     return arr += arrc;
+            // }, 0)
+                const avr = sum/scr.length;
+                if(avr > 89){
+                    return "A";
+                }else if (avr > 79){
+                    return "B";
+                }else if (avr > 69){
+                    return "C";
+                }else if (avr > 59){
+                    return "D";
+                }else{
+                    return "F";
+                }
+            }
+        
+        const stScore = [100, 90, 80, 90, 100];
+        console.log(aver(stScore));
+    </script>
+</body>
+</html>

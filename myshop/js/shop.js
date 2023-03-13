@@ -1,35 +1,101 @@
-(function()
-{
-    const listAll = document.getElementsByClassName('list-all')[0];
-    const cart = document.getElementById('cart');
-    window.onload = function()
-    {
-        listAll.addEventListener('click',changeNav);
-        cart.addEventListener('click',cartBoxView);
-    }
+(function(){
+   const listAll = document.getElementsByClassName('list-all')[0];
+   const cart = document.getElementById('cart');
+   const close = document.getElementById('close');
+   const bestLinks = document.querySelectorAll('best-tab > li');
 
-    function changeNav()
-    {
-        const nav = document.getElementsByTagName('nav')[0].offsetTop + 52;
-        const sitemap = document.getElementById('sitemap')
-        listAll.classList.toggle('close');
-        listAll.classList.toggle('newlist');
-        sitemap.classList.toggle('vmode');
-        sitemap.classList.toggle('closemode');
-        if(listAll.className == 'list-all close')
-        {
-            sitemap.style.top = nav+ 'px';
-            sitemap.style.display='block';
-        }
-        else
-        {
-            sitemap.style.display='none';
-        }
-    }
+   listAll.addEventListener("click", changeNav);
+   cart.addEventListener('click', cartBoxView);
+   close.addEventListener('click', cartBoxView);
+   
 
-    function cartBoxView()
-    {
-        document.getElementsByClassName('cart-view')[0].classList.toggle('none');
-    }
 
+   function changeNav(){
+      const nav = document.getElementsByTagName('nav')[0].offsetTop + 52;
+      const sitemap = document.getElementById('sitemap');
+      listAll.classList.toggle('close');
+      listAll.classList.toggle('newlist');
+      console.log(listAll.className);
+      if(listAll.className == 'list-all close'){
+        sitemap.style.top = nav+"px";
+        sitemap.style.display="block";
+      }else{
+         sitemap.style.display="none";
+      }
+   }
+
+   function cartBoxView(){
+      document.getElementsByClassName('cart-view')[0].classList.toggle('none');
+   }
+   //슬라이드쇼
+let slideIndex = -1;
+showSlides(slideIndex);
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("img-slide");
+if(n > slides.length) {slideIndex = 1}
+if(n < 1) {slideIndex = slides.length}
+for(i = 0; i < slides.length; i++){
+   slides[i].style.display = "none";
+}
+slides[slideIndex - 1].style.display = "block";
+}
+
+  // const bx = document.getElementById("ct");
+   // console.log(bx.dataset);
+
+//    window.onload = function(){
+//    }
 }());
+
+
+//슬라이드쇼
+let slideIndex = 0;
+   showSlides();
+function showSlides() {
+   let i;
+   const slides = document.getElementsByClassName("img-slide");
+   const dot = document.getElementsByClassName('dot');
+   for(i = 0; i < slides.length; i++){
+      slides[i].style.display = "none";
+      dot[i].classList.remove("active");
+   }
+   slideIndex++;
+   if(slideIndex > slides.length){
+      slideIndex = 1;
+   }
+   slides[slideIndex - 1].style.display = "block";
+   dot[slideIndex-1].classList.add('active');
+   setTimeout(showSlides, 2000);
+}
+document.getElementsByClassName('tablinks')[0].click();
+function openBest(e, bid){
+   const tabcontent = document.getElementsByClassName('besttabcontent');
+   for(i=0; i< tabcontent.length; i++){
+      tabcontent[i].style.display = "none";
+   }
+   const tablinks = document.getElementsByClassName('tablinks');
+   for(i=0; i< tablinks.length; i++){
+      tablinks[i].classList.remove('active');
+   }
+document.getElementById(bid).style.display = "block";
+e.currentTarget.classList.add('active');
+
+}
+
+
+function viewTab(e){
+const tabcontent = document.getElementsByClassName('tabcontent');
+const tabs = document.getElementsByClassName('tab')[0];
+for(let i = 0; i < tabcontent.length; i++){
+   tabcontent[i].classList.remove('active');
+   tabs.children[i].classList.remove('active');
+}
+for(let i = 0; i < tabcontent.length; i++){
+   tabs.children[i]
+}
+
+tabcontent[e].classList.add('active');
+tabs.children[e].classList.add('active');
+}
+

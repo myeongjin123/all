@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+
+        .container{
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        button.accordion{
+            outline: none;
+            border: none;
+            background: #ededed;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            font-size: 16px;
+            width: 100%;
+            text-align: left;
+        }
+        .accordion i{
+            float: right;
+        }
+        .accordion:last-child{
+            border-bottom: none;
+        }
+        .panel{
+            padding: 0 18px;
+            background: #fff;
+            max-height: 0;
+            overflow: hidden;
+            text-align: left;
+            transition: max-height 0.3s;
+            border-bottom: 1px solid #ddd;
+        }
+        .active, .accordion:hover{
+            background: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>아코디언메뉴</h2>
+    <button class="accordion">내용1
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    <div class="panel">
+        <p>별과 피가 바이며, 주는 얼마나 현저하게 이상 이성은 인간에 교향악이다.
+             내려온 찬미를 청춘을 있는가? 살 바로 방황하였으며, 있으랴?
+              너의 하는 인생의 청춘을 구하기 두손을 이상의 있음으로써 봄바람이다.</p>
+    </div>
+    <button class="accordion">내용2
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    <div class="panel">
+        <p>별과 피가 바이며, 주는 얼마나 현저하게 이상 이성은 인간에 교향악이다.
+             내려온 찬미를 청춘을 있는가? 살 바로 방황하였으며, 있으랴?
+              너의 하는 인생의 청춘을 구하기 두손을 이상의 있음으로써 봄바람이다.</p>
+    </div>
+    <button class="accordion">내용3
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    <div class="panel">
+        <p>별과 피가 바이며, 주는 얼마나 현저하게 이상 이성은 인간에 교향악이다.
+             내려온 찬미를 청춘을 있는가? 살 바로 방황하였으며, 있으랴?
+              너의 하는 인생의 청춘을 구하기 두손을 이상의 있음으로써 봄바람이다.</p>
+    </div>
+    </div>
+    <script>
+        const acc = document.getElementsByClassName('accordion');
+        let i;
+        for(i = 0; i < acc.length; i ++){
+            acc[i].addEventListener("click", function(){
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                if(panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                }else{
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+
+                } 
+                this.children[0].classList.toggle('fa-plus');
+                this.children[0].classList.toggle('fa-minus');
+            });
+        }
+    </script>
+</body>
+</html>

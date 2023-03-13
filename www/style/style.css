@@ -87,8 +87,8 @@ ul.lnb{
 }
 .row{
     display:flex;
-    margin-left:-10px;
-    margin-right:-10px;
+    margin-left:0px;
+    margin-right:-20px;
 }
 .notice-gallery{
     width:40%;
